@@ -1,0 +1,87 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="top-header-bg"></div>
+<div class="main">
+  <h1 class="title">
+    {{ 'TITLE' | i18n }}
+  </h1>
+  <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig" (init)="slickInit($event)"
+    (breakpoint)="breakpoint($event)" (afterChange)="afterChange($event)" (beforeChange)="beforeChange($event)">
+
+    <div ngxSlickItem class="slide" *ngFor="let name of categoryNames; let index = index">
+      <div class="card">
+        <h3 class="card-title">
+          {{ name | i18n }}
+        </h3>
+        <div class="table-component">
+          <table>
+            <tbody *ngFor="let fixedasset of ACCOUNT_LIST">
+              <tr class="row" *ngIf="fixedasset.type === name">
+                <td>{{fixedasset.name}}</td>
+                <td>{{fixedasset.cost}}</td>
+                <td><button (click)="deleteBtn(fixedasset)" class="btndelete">-</button></td>
+              </tr>
+            </tbody>
+              <tr *ngIf="showTextBoxes[index]" class="row">
+                <td><input type="text" size="5" [(ngModel)]="accountName" autofocus></td>
+                <td><input type="text" size="5" [(ngModel)]="accountCost"></td>
+                <td><button class="next_textbox" (click)="addNewItem(index)">/</button></td>
+              </tr>
+          </table>
+        </div>
+        <div class="btn-floating-container">
+          <button class="btn-floating" (click)="addAccount(index)">+</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div ngxSlickItem class="slide">
+    <div class="card">
+      <h3 class="card-title">
+        {{ 'FIXED-ASSET' | i18n }}
+      </h3>
+      <div class="table-component">
+        <table>
+          <tr *ngFor="let fixedasset of fixedassets" class="row">
+              <td>{{fixedasset.name}}</td>
+              <td>{{fixedasset.value}}</td>
+              <td><button (click)="deleteBtn(fixedasset)" class="btndelete">-</button></td>
+          </tr>
+          <tr *ngIf="FixedAssetShowTextbox" class="row">
+            <td><input type="text" size="5"></td>
+            <td><input type="text" size="5"></td>
+            <td><button>/</button></td>
+          </tr>
+        </table>
+        </div>
+        <div class="btn-floating-container">
+          <button class="btn-floating" (click)="FixedAssetShowTextbox = !FixedAssetShowTextbox">+</button>
+        </div>
+    </div>
+  </div>
+  
+  <div ngxSlickItem class="slide">
+    <div class="card">
+      
+    </div>
+  </div>
+  
+  <div ngxSlickItem class="slide">
+    <div class="card">
+      
+    </div>
+  </div> -->
+
+  </ngx-slick-carousel>
+  <!-- <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="> -->
+</div>
+<div class="bottom-footer-bg">
+  <div class="rectangle">
+    Assest {{finalAssetBalance}}
+  </div>
+  <div class="rectangle">
+    Capital {{finalCapitalBalance}}
+  </div>
+  <div class="rectangle">
+    Liabilities {{finalLiabiliteisBalance}}
+  </div>
+</div>

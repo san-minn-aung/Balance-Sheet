@@ -1,0 +1,139 @@
+// color values
+$color-primary : #1BA2D5;
+$color-secondary : #BDBDBD;
+$color-accent : #651FFF;
+
+body{
+    width: 100%;
+    position: fixed;
+    background-color: #EFEFEF;
+}
+
+h1{
+    &.title{
+        color: #fff;
+        text-align: center;
+    }
+}
+ngx-slick-carousel{
+    left: -2.5%;
+}
+
+div {
+    &.main{
+        
+        
+    }
+    &.top-header-bg{
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        z-index: -1;
+        background: #651FFF;
+        width: 100%;
+        height: 40%;
+    }
+}
+
+.card{
+    position: relative;
+    width: 300px;
+    min-height: 300px;
+    background-color: #fff;
+    margin:auto;
+    outline: none;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    .card-title{
+        padding: 15px 30px;
+        color: $color-primary;
+        font-family: 'Arial Rounded MT';
+        font-size: 25px;
+        font-weight: bold;
+    }
+    /*floating button*/
+    .btn-floating-container {
+        // right: 1rem;
+        // bottom: 1rem;
+        position: relative;
+        margin-left: 220px;
+        bottom: 30px;
+        //border-radius: 50%;
+        //box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.4);
+        .btn-floating {
+            
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.4);
+            background-color: $color-accent;
+            text-align: center;
+            padding: 0px;
+            font-size: 34px;
+            outline: none;
+            color: white;       
+        }
+    }
+    .table-component
+    {  
+        top: -40px;
+        position: relative;
+        padding: 10px 20px;
+        table
+        {
+            width: 100%;
+        }
+        .row
+        {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            td
+            {
+                color: $color-secondary;
+                font-size: 20px;
+                padding: 3px;
+                text-align: justify;
+            }
+           
+        }
+      
+.btndelete
+    {
+      position: relative;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      box-shadow:black;
+      background-color: $color-accent;
+      text-align: center;
+      padding: 2px;
+      font-size: 20px;
+      outline: none;
+      color: white;       
+    }
+    .next_textbox{
+        position: relative;
+        width: 30px;
+        height: 30px;
+        color: blue;
+        text-align: center;
+        outline: none;
+    }
+    }
+    
+}   
+.rectangle{
+  margin-left: 40px;
+  padding: 10px;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(112, 112, 112, 0.28);
+ } 
+
+
+.slide{
+    outline: none;
+    margin: 0.08%;
+}
